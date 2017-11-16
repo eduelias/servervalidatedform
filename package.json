@@ -1,6 +1,6 @@
 {
     "_from": "server-validated-form",
-    "_id": "server-validated-form@0.1.10",
+    "_id": "server-validated-form@0.1.11",
     "_inBundle": false,
     "_integrity": "sha1-Dnz+TSMdSsQUEhWaNj9IXYptyzE=",
     "_location": "/server-validated-form",
@@ -95,7 +95,7 @@
         "test": "karma start"
     },
     "typings": "./index.d.ts",
-    "version": "0.1.10",
+    "version": "0.1.11",
     "dependencies": {
         "@angular/forms": "^5.0.1"
     }
