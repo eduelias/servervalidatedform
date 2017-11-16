@@ -32,6 +32,7 @@
     "description": "Build an Angular library compatible with AoT compilation and Tree shaking",
     "devDependencies": {
         "@angular/animations": "4.1.0",
+        "@angular/cli": "^1.5.0",
         "@angular/common": "4.1.0",
         "@angular/compiler": "4.1.0",
         "@angular/compiler-cli": "4.1.0",
@@ -94,7 +95,7 @@
         "test": "karma start"
     },
     "typings": "./index.d.ts",
-    "version": "0.0.6",
+    "version": "0.1.9",
     "dependencies": {
         "@angular/forms": "^5.0.1"
     }

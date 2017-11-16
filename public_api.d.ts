@@ -8,4 +8,4 @@
 /**
  * Entry point for all public APIs of the package.
  */
-export * from './src/server-validated-form';
+export * from './src/server-validated-form.d';
