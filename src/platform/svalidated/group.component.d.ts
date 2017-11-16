@@ -1,5 +1,5 @@
 import { FormGroup } from "@angular/forms/src/model";
 
-export class ValidatedForm extends FormGroup {
+export class SVFormGroup extends FormGroup {
     
 }
