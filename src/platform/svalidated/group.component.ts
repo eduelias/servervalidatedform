@@ -1,4 +1,13 @@
 import { FormGroup } from "@angular/forms/src/model";
+import { NgModule } from "@angular/core";
+
+/**
+ * Server side validated form.
+ *
+ * @author Eduardo Elias Saleh
+ */
+@NgModule({})
+
 
 export class SVFormGroup extends FormGroup {
   setFromModelState(response: any, form: SVFormGroup) {
