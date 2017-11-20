@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9,9 +8,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-exports.__esModule = true;
-var model_1 = require("@angular/forms/src/model");
-var SVFormGroup = /** @class */ (function (_super) {
+import { FormGroup } from "@angular/forms/src/model";
+var SVFormGroup = (function (_super) {
     __extends(SVFormGroup, _super);
     function SVFormGroup() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -25,12 +23,13 @@ var SVFormGroup = /** @class */ (function (_super) {
                         form.controls[fieldName].setErrors(validationErrorDictionary[fieldName]);
                     }
                     else {
-                        this.errors.setErrors(Object.assign(this.errors, validationErrorDictionary[fieldName]));
+                        this.setErrors(Object.assign(this.errors, validationErrorDictionary[fieldName]));
                     }
                 }
             }
         }
     };
     return SVFormGroup;
-}(model_1.FormGroup));
-exports.SVFormGroup = SVFormGroup;
+}(FormGroup));
+export { SVFormGroup };
+//# sourceMappingURL=group.component.js.map

@@ -25,7 +25,7 @@
     "_where": "C:\\Users\\Eduardo\\source\\repos\\LAB15.A5.ServerValidatedForm",
     "author": "",
     "bugs": {
-        "url": "https://github.com/robisim74/server-validated-form/issues"
+        "url": "https://github.com/eduelias/server-validated-form/issues"
     },
     "bundleDependencies": false,
     "deprecated": false,
@@ -34,8 +34,8 @@
         "@angular/animations": "4.1.0",
         "@angular/cli": "^1.5.0",
         "@angular/common": "4.1.0",
-        "@angular/compiler": "4.1.0",
-        "@angular/compiler-cli": "4.1.0",
+        "@angular/compiler": "^4.1.0",
+        "@angular/compiler-cli": "^4.1.0",
         "@angular/core": "4.1.0",
         "@angular/platform-browser": "4.1.0",
         "@angular/platform-browser-dynamic": "4.1.0",
@@ -55,20 +55,21 @@
         "karma-spec-reporter": "0.0.31",
         "karma-webpack": "2.0.3",
         "reflect-metadata": "0.1.10",
-        "rollup": "0.41.6",
+        "rollup": "^0.41.6",
         "rollup-plugin-node-resolve": "3.0.0",
         "rxjs": "5.4.0",
         "shelljs": "0.7.7",
         "sorcery": "0.10.0",
         "ts-loader": "2.1.0",
         "tslint": "5.4.0",
-        "typescript": "2.3.4",
+        "typescript": "^2.3.4",
+        "uglify-js": "^3.1.10",
         "webpack": "2.6.1",
         "yargs": "8.0.1",
         "zone.js": "0.8.11"
     },
     "es2015": "./modules/server-validated-form.js",
-    "homepage": "https://github.com/robisim74/server-validated-form",
+    "homepage": "https://github.com/eduelias/server-validated-form",
     "keywords": [
         "angular",
         "javascript",
@@ -84,10 +85,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/robisim74/server-validated-form.git"
+        "url": "git+https://github.com/eduelias/server-validated-form.git"
     },
     "scripts": {
-        "build": "node build.js",
+        "transpile": "ngc",
+        "package": "rollup -c",
+        "minify": "uglifyjs dist/bundles/svform.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/svform.umd.min.js",
+        "build": "npm run transpile && npm run package && npm run minify",
         "compodoc": "compodoc -p tsconfig.json",
         "compodoc-serve": "compodoc -s",
         "pack-lib": "npm pack ./dist",

@@ -8,8 +8,8 @@ export class SVFormGroup extends FormGroup {
         if (validationErrorDictionary.hasOwnProperty(fieldName)) {
           if (form.controls[fieldName]) {
             form.controls[fieldName].setErrors(validationErrorDictionary[fieldName]);
-          } else {
-            this.errors.setErrors(Object.assign(this.errors, validationErrorDictionary[fieldName]));
+          } else {                          
+            this.setErrors(Object.assign(this.errors, validationErrorDictionary[fieldName]));
           }
         }
       }
