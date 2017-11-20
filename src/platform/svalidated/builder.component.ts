@@ -1,5 +1,5 @@
 import { FormBuilder } from "@angular/forms/src/form_builder";
-import { SVFormGroup } from "src/platform/svalidated/group.component";
+import { SVFormGroup } from "./group.component";
 import { NgModule } from "@angular/core";
 
 @NgModule({})
