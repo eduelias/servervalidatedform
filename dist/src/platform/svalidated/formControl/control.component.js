@@ -9,6 +9,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import { FormControl } from "@angular/forms/src/model";
+import { NgModule } from "@angular/core";
 var SVFormControl = (function (_super) {
     __extends(SVFormControl, _super);
     function SVFormControl() {
@@ -17,4 +18,9 @@ var SVFormControl = (function (_super) {
     return SVFormControl;
 }(FormControl));
 export { SVFormControl };
+SVFormControl.decorators = [
+    { type: NgModule, args: [{},] },
+];
+/** @nocollapse */
+SVFormControl.ctorParameters = function () { return []; };
 //# sourceMappingURL=control.component.js.map

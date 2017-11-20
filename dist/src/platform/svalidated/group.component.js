@@ -9,6 +9,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import { FormGroup } from "@angular/forms/src/model";
+import { NgModule } from "@angular/core";
+/**
+ * Server side validated form.
+ *
+ * @author Eduardo Elias Saleh
+ */
 var SVFormGroup = (function (_super) {
     __extends(SVFormGroup, _super);
     function SVFormGroup() {
@@ -32,4 +38,9 @@ var SVFormGroup = (function (_super) {
     return SVFormGroup;
 }(FormGroup));
 export { SVFormGroup };
+SVFormGroup.decorators = [
+    { type: NgModule, args: [{},] },
+];
+/** @nocollapse */
+SVFormGroup.ctorParameters = function () { return []; };
 //# sourceMappingURL=group.component.js.map

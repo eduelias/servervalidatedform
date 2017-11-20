@@ -7,5 +7,23 @@
 
 
 export {FormGroup as FormGroup_1} from '@angular/forms/src/model';
-
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvRWR1YXJkby9zb3VyY2UvcmVwb3MvTEFCMTUuQTUuU2VydmVyVmFsaWRhdGVkRm9ybS9zcmMvcGxhdGZvcm0vc3ZhbGlkYXRlZC9ncm91cC5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvRWR1YXJkby9zb3VyY2UvcmVwb3MvTEFCMTUuQTUuU2VydmVyVmFsaWRhdGVkRm9ybS9zcmMvcGxhdGZvcm0vc3ZhbGlkYXRlZC9ncm91cC5jb21wb25lbnQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7OyJ9
+import * as import0 from '@angular/core';
+import * as import1 from './group.component';
+class SVFormGroupInjector extends import0.ɵNgModuleInjector<import1.SVFormGroup> {
+  _SVFormGroup_0:import1.SVFormGroup;
+  constructor(parent:import0.Injector) {
+    super(parent,([] as any[]),([] as any[]));
+  }
+  createInternal():import1.SVFormGroup {
+    this._SVFormGroup_0 = new import1.SVFormGroup();
+    return this._SVFormGroup_0;
+  }
+  getInternal(token:any,notFoundResult:any):any {
+    if ((token === import1.SVFormGroup)) { return this._SVFormGroup_0; }
+    return notFoundResult;
+  }
+  destroyInternal():void {
+  }
+}
+export const SVFormGroupNgFactory:import0.NgModuleFactory<import1.SVFormGroup> = new import0.NgModuleFactory<any>(SVFormGroupInjector,import1.SVFormGroup);
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiQzovVXNlcnMvRWR1YXJkby9zb3VyY2UvcmVwb3MvTEFCMTUuQTUuU2VydmVyVmFsaWRhdGVkRm9ybS9zcmMvcGxhdGZvcm0vc3ZhbGlkYXRlZC9ncm91cC5jb21wb25lbnQubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vQzovVXNlcnMvRWR1YXJkby9zb3VyY2UvcmVwb3MvTEFCMTUuQTUuU2VydmVyVmFsaWRhdGVkRm9ybS9zcmMvcGxhdGZvcm0vc3ZhbGlkYXRlZC9ncm91cC5jb21wb25lbnQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==

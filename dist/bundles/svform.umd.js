@@ -1,8 +1,8 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/forms/src/model'), require('@angular/forms/src/form_builder'), require('src/platform/svalidated/group.component')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/forms/src/model', '@angular/forms/src/form_builder', 'src/platform/svalidated/group.component'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng.svform = global.ng.svform || {}),global._angular_forms_src_model,global._angular_forms_src_form_builder,global.src_platform_svalidated_group_component));
-}(this, (function (exports,_angular_forms_src_model,_angular_forms_src_form_builder,src_platform_svalidated_group_component) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/forms/src/model'), require('@angular/core'), require('@angular/forms/src/form_builder'), require('src/platform/svalidated/group.component')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/forms/src/model', '@angular/core', '@angular/forms/src/form_builder', 'src/platform/svalidated/group.component'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng.svform = global.ng.svform || {}),global._angular_forms_src_model,global.ng.core,global._angular_forms_src_form_builder,global.src_platform_svalidated_group_component));
+}(this, (function (exports,_angular_forms_src_model,_angular_core,_angular_forms_src_form_builder,src_platform_svalidated_group_component) { 'use strict';
 
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -21,6 +21,11 @@ var SVFormControl = (function (_super) {
     }
     return SVFormControl;
 }(_angular_forms_src_model.FormControl));
+SVFormControl.decorators = [
+    { type: _angular_core.NgModule, args: [{},] },
+];
+/** @nocollapse */
+SVFormControl.ctorParameters = function () { return []; };
 
 var __extends$1 = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -42,6 +47,11 @@ var SVFormBuilder = (function (_super) {
     };
     return SVFormBuilder;
 }(_angular_forms_src_form_builder.FormBuilder));
+SVFormBuilder.decorators = [
+    { type: _angular_core.NgModule, args: [{},] },
+];
+/** @nocollapse */
+SVFormBuilder.ctorParameters = function () { return []; };
 
 var __extends$2 = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -53,6 +63,11 @@ var __extends$2 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+/**
+ * Server side validated form.
+ *
+ * @author Eduardo Elias Saleh
+ */
 var SVFormGroup$1 = (function (_super) {
     __extends$2(SVFormGroup$$1, _super);
     function SVFormGroup$$1() {
@@ -75,6 +90,11 @@ var SVFormGroup$1 = (function (_super) {
     };
     return SVFormGroup$$1;
 }(_angular_forms_src_model.FormGroup));
+SVFormGroup$1.decorators = [
+    { type: _angular_core.NgModule, args: [{},] },
+];
+/** @nocollapse */
+SVFormGroup$1.ctorParameters = function () { return []; };
 
 /**
  * Generated bundle index. Do not edit.

@@ -10,6 +10,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 import { FormBuilder } from "@angular/forms/src/form_builder";
 import { SVFormGroup } from "src/platform/svalidated/group.component";
+import { NgModule } from "@angular/core";
 var SVFormBuilder = (function (_super) {
     __extends(SVFormBuilder, _super);
     function SVFormBuilder() {
@@ -21,4 +22,9 @@ var SVFormBuilder = (function (_super) {
     return SVFormBuilder;
 }(FormBuilder));
 export { SVFormBuilder };
+SVFormBuilder.decorators = [
+    { type: NgModule, args: [{},] },
+];
+/** @nocollapse */
+SVFormBuilder.ctorParameters = function () { return []; };
 //# sourceMappingURL=builder.component.js.map

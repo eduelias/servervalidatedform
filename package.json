@@ -27,7 +27,7 @@
     "bugs": {
         "url": "https://github.com/eduelias/server-validated-form/issues"
     },
-    "bundleDependencies": false,
+    "bundleDependencies": [],
     "deprecated": false,
     "description": "Build an Angular library compatible with AoT compilation and Tree shaking",
     "devDependencies": {

@@ -1,2 +1,6 @@
 
 node_modules
+*.ngfactory.ts
+*.ngsummary.json
+*.metadata.json
+*.js.map
