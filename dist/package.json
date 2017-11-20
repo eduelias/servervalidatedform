@@ -1,6 +1,6 @@
 {
     "name": "lab15-svalidated-form",
-    "version": "0.1.15",
+    "version": "0.1.22",
     "description": "Server side validated form angular module",
     "main": "dist/bundles/svform.umd.min.js",
     "module": "dist/index.js",
