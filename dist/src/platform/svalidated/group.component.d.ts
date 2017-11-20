@@ -1,4 +1,4 @@
-import { FormGroup } from "@angular/forms/src/model";
+import { FormGroup } from "@angular/forms";
 /**
  * Server side validated form.
  *

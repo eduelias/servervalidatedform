@@ -1,5 +1,5 @@
-import { FormBuilder } from "@angular/forms/src/form_builder";
-import { SVFormGroup } from "src/platform/svalidated/group.component";
+import { FormBuilder } from "@angular/forms";
+import { SVFormGroup } from "./group.component";
 export declare class SVFormBuilder extends FormBuilder {
     group(controlsConfig: {
         [key: string]: any;
