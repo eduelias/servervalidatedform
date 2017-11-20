@@ -4,3 +4,4 @@ node_modules
 *.ngsummary.json
 *.metadata.json
 *.js.map
+.vscode
