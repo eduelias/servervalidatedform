@@ -101,6 +101,6 @@
     "typings": "./index.ts",
     "version": "0.1.15",
     "dependencies": {
-        "@angular/forms": "^5.0.1"
+        "@angular/forms": "^4.1.0"
     }
 }
