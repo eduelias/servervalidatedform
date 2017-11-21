@@ -6,6 +6,7 @@ export default {
     moduleName: 'ng.svform',
     globals: {
         '@angular/core': 'ng.core',
+        '@angular/forms': 'ng.forms',
         'rxjs/Observable': 'Rx',
         'rxjs/ReplaySubject': 'Rx',
         'rxjs/add/operator/map': 'Rx.Observable.prototype',

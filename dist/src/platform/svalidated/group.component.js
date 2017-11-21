@@ -8,8 +8,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+import { FormGroup, AbstractControl } from "@angular/forms";
 import { Injectable } from "@angular/core";
-import { FormGroup, ValidatorFn, AsyncValidatorFn, AbstractControl } from "@angular/forms";
 /**
  * Server side validated form.
  *
@@ -22,8 +22,8 @@ var /**
  */
 SVFormGroup = /** @class */ (function (_super) {
     __extends(SVFormGroup, _super);
-    function SVFormGroup() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function SVFormGroup(fgroup) {
+        return _super.call(this, fgroup.controls, fgroup.validator, fgroup.asyncValidator) || this;
     }
     SVFormGroup.prototype.setFromModelState = function (response, form) {
         if (response.error && response.error.ModelState) {
@@ -48,21 +48,4 @@ SVFormGroup = /** @class */ (function (_super) {
  * @author Eduardo Elias Saleh
  */
 export { SVFormGroup };
-//@Injectable()
-// export class SVFormGroup extends FormGroup {
-//     setFromModelState(response: any, form: SVFormGroup) {
-//     if(response.error && response.error.ModelState){
-//       let validationErrorDictionary = response.error.ModelState;
-//       for (var fieldName in validationErrorDictionary) {
-//         if (validationErrorDictionary.hasOwnProperty(fieldName)) {
-//           if (form.controls[fieldName]) {
-//             form.controls[fieldName].setErrors(validationErrorDictionary[fieldName]);
-//           } else {
-//             this.setErrors(Object.assign(this.errors, validationErrorDictionary[fieldName]));
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 //# sourceMappingURL=group.component.js.map

@@ -79,7 +79,7 @@ SVFormBuilder = /** @class */ (function (_super) {
         var controls = this._reduceControls(controlsConfig);
         var validator = extra != null ? extra['validator'] : null;
         var asyncValidator = extra != null ? extra['asyncValidator'] : null;
-        return new SVFormGroup(controls, validator, asyncValidator);
+        return new SVFormGroup(new FormGroup(controls, validator, asyncValidator));
     };
     /** @internal */
     /** @internal */

@@ -2,26 +2,6 @@ import {Injectable} from '@angular/core';
 import { FormBuilder, ValidatorFn, AsyncValidatorFn, FormGroup, AbstractControl, FormControl, FormArray } from '@angular/forms';
 import { SVFormGroup } from './group.component';
 
-/**
- * @whatItDoes Creates an {@link AbstractControl} from a user-specified configuration.
- *
- * It is essentially syntactic sugar that shortens the `new FormGroup()`,
- * `new FormControl()`, and `new FormArray()` boilerplate that can build up in larger
- * forms.
- *
- * @howToUse
- *
- * To use, inject `FormBuilder` into your component class. You can then call its methods
- * directly.
- *
- * {@example forms/ts/formBuilder/form_builder_example.ts region='Component'}
- *
- *  * **npm package**: `@angular/forms`
- *
- *  * **NgModule**: {@link ReactiveFormsModule}
- *
- * @stable
- */
 @Injectable()
 export class SVFormBuilder extends FormBuilder {
   /**
@@ -34,9 +14,8 @@ export class SVFormBuilder extends FormBuilder {
     const controls = this._reduceControls(controlsConfig);
     const validator: ValidatorFn = extra != null ? extra['validator'] : null;
     const asyncValidator: AsyncValidatorFn = extra != null ? extra['asyncValidator'] : null;
-    return new SVFormGroup(controls, validator, asyncValidator);
+    return new SVFormGroup(new FormGroup(controls, validator, asyncValidator));
   }
-
 
   /** @internal */
   _reduceControls(controlsConfig: {[k: string]: any}): {[key: string]: AbstractControl} {

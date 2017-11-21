@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms')) :
 	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng.svform = global.ng.svform || {}),global.ng.core,global._angular_forms));
+	(factory((global.ng = global.ng || {}, global.ng.svform = global.ng.svform || {}),global.ng.core,global.ng.forms));
 }(this, (function (exports,_angular_core,_angular_forms) { 'use strict';
 
 var __extends$1 = (undefined && undefined.__extends) || (function () {
@@ -21,8 +21,8 @@ var __extends$1 = (undefined && undefined.__extends) || (function () {
  */
 var SVFormGroup = /** @class */ (function (_super) {
     __extends$1(SVFormGroup, _super);
-    function SVFormGroup() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function SVFormGroup(fgroup) {
+        return _super.call(this, fgroup.controls, fgroup.validator, fgroup.asyncValidator) || this;
     }
     SVFormGroup.prototype.setFromModelState = function (response, form) {
         if (response.error && response.error.ModelState) {
@@ -41,24 +41,6 @@ var SVFormGroup = /** @class */ (function (_super) {
     };
     return SVFormGroup;
 }(_angular_forms.FormGroup));
-
-//@Injectable()
-// export class SVFormGroup extends FormGroup {
-//     setFromModelState(response: any, form: SVFormGroup) {
-//     if(response.error && response.error.ModelState){
-//       let validationErrorDictionary = response.error.ModelState;
-//       for (var fieldName in validationErrorDictionary) {
-//         if (validationErrorDictionary.hasOwnProperty(fieldName)) {
-//           if (form.controls[fieldName]) {
-//             form.controls[fieldName].setErrors(validationErrorDictionary[fieldName]);
-//           } else {
-//             this.setErrors(Object.assign(this.errors, validationErrorDictionary[fieldName]));
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -118,7 +100,7 @@ var SVFormBuilder = /** @class */ (function (_super) {
         var controls = this._reduceControls(controlsConfig);
         var validator = extra != null ? extra['validator'] : null;
         var asyncValidator = extra != null ? extra['asyncValidator'] : null;
-        return new SVFormGroup(controls, validator, asyncValidator);
+        return new SVFormGroup(new _angular_forms.FormGroup(controls, validator, asyncValidator));
     };
     /** @internal */
     /** @internal */
@@ -152,12 +134,19 @@ var SVFormBuilder = /** @class */ (function (_super) {
     return SVFormBuilder;
 }(_angular_forms.FormBuilder));
 
+var SVFormModule = /** @class */ (function () {
+    function SVFormModule() {
+    }
+    return SVFormModule;
+}());
+
 /**
  * Generated bundle index. Do not edit.
  */
 
-exports.SVFormBuilder = SVFormBuilder;
 exports.SVFormGroup = SVFormGroup;
+exports.SVFormBuilder = SVFormBuilder;
+exports.SVFormModule = SVFormModule;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
