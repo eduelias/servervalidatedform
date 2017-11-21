@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import { FormBuilder, ValidatorFn, AsyncValidatorFn, FormGroup, AbstractControl, FormControl, FormArray } from '@angular/forms';
-import { SVFormGroup } from 'index';
+import { SVFormGroup } from './group.component';
 
 /**
  * @whatItDoes Creates an {@link AbstractControl} from a user-specified configuration.
