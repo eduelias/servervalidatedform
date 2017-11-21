@@ -1,5 +1,5 @@
 import { FormBuilder } from '@angular/forms';
-import { SVFormGroup } from 'index';
+import { SVFormGroup } from './group.component';
 /**
  * @whatItDoes Creates an {@link AbstractControl} from a user-specified configuration.
  *

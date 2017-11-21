@@ -9,8 +9,8 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import { Injectable } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, FormArray } from '@angular/forms';
-import { SVFormGroup } from 'index';
+import { FormBuilder, ValidatorFn, AsyncValidatorFn, FormGroup, AbstractControl, FormControl, FormArray } from '@angular/forms';
+import { SVFormGroup } from './group.component';
 /**
  * @whatItDoes Creates an {@link AbstractControl} from a user-specified configuration.
  *
@@ -31,7 +31,27 @@ import { SVFormGroup } from 'index';
  *
  * @stable
  */
-var SVFormBuilder = (function (_super) {
+var /**
+ * @whatItDoes Creates an {@link AbstractControl} from a user-specified configuration.
+ *
+ * It is essentially syntactic sugar that shortens the `new FormGroup()`,
+ * `new FormControl()`, and `new FormArray()` boilerplate that can build up in larger
+ * forms.
+ *
+ * @howToUse
+ *
+ * To use, inject `FormBuilder` into your component class. You can then call its methods
+ * directly.
+ *
+ * {@example forms/ts/formBuilder/form_builder_example.ts region='Component'}
+ *
+ *  * **npm package**: `@angular/forms`
+ *
+ *  * **NgModule**: {@link ReactiveFormsModule}
+ *
+ * @stable
+ */
+SVFormBuilder = /** @class */ (function (_super) {
     __extends(SVFormBuilder, _super);
     function SVFormBuilder() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -42,7 +62,19 @@ var SVFormBuilder = (function (_super) {
      *
      * See the {@link FormGroup} constructor for more details.
      */
-    SVFormBuilder.prototype.svgroup = function (controlsConfig, extra) {
+    /**
+       * Construct a new {@link FormGroup} with the given map of configuration.
+       * Valid keys for the `extra` parameter map are `validator` and `asyncValidator`.
+       *
+       * See the {@link FormGroup} constructor for more details.
+       */
+    SVFormBuilder.prototype.svgroup = /**
+       * Construct a new {@link FormGroup} with the given map of configuration.
+       * Valid keys for the `extra` parameter map are `validator` and `asyncValidator`.
+       *
+       * See the {@link FormGroup} constructor for more details.
+       */
+    function (controlsConfig, extra) {
         if (extra === void 0) { extra = null; }
         var controls = this._reduceControls(controlsConfig);
         var validator = extra != null ? extra['validator'] : null;
@@ -50,7 +82,9 @@ var SVFormBuilder = (function (_super) {
         return new SVFormGroup(controls, validator, asyncValidator);
     };
     /** @internal */
-    SVFormBuilder.prototype._reduceControls = function (controlsConfig) {
+    /** @internal */
+    SVFormBuilder.prototype._reduceControls = /** @internal */
+    function (controlsConfig) {
         var _this = this;
         var controls = {};
         Object.keys(controlsConfig).forEach(function (controlName) {
@@ -59,7 +93,9 @@ var SVFormBuilder = (function (_super) {
         return controls;
     };
     /** @internal */
-    SVFormBuilder.prototype._createControl = function (controlConfig) {
+    /** @internal */
+    SVFormBuilder.prototype._createControl = /** @internal */
+    function (controlConfig) {
         if (controlConfig instanceof FormControl || controlConfig instanceof FormGroup ||
             controlConfig instanceof FormArray) {
             return controlConfig;
@@ -76,10 +112,25 @@ var SVFormBuilder = (function (_super) {
     };
     return SVFormBuilder;
 }(FormBuilder));
+/**
+ * @whatItDoes Creates an {@link AbstractControl} from a user-specified configuration.
+ *
+ * It is essentially syntactic sugar that shortens the `new FormGroup()`,
+ * `new FormControl()`, and `new FormArray()` boilerplate that can build up in larger
+ * forms.
+ *
+ * @howToUse
+ *
+ * To use, inject `FormBuilder` into your component class. You can then call its methods
+ * directly.
+ *
+ * {@example forms/ts/formBuilder/form_builder_example.ts region='Component'}
+ *
+ *  * **npm package**: `@angular/forms`
+ *
+ *  * **NgModule**: {@link ReactiveFormsModule}
+ *
+ * @stable
+ */
 export { SVFormBuilder };
-SVFormBuilder.decorators = [
-    { type: Injectable },
-];
-/** @nocollapse */
-SVFormBuilder.ctorParameters = function () { return []; };
 //# sourceMappingURL=builder.component.js.map

@@ -9,19 +9,21 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import { Injectable } from "@angular/core";
-import { FormGroup } from "@angular/forms";
+import { FormGroup, ValidatorFn, AsyncValidatorFn, AbstractControl } from "@angular/forms";
 /**
  * Server side validated form.
  *
  * @author Eduardo Elias Saleh
  */
-var SVFormGroup = (function (_super) {
+var /**
+ * Server side validated form.
+ *
+ * @author Eduardo Elias Saleh
+ */
+SVFormGroup = /** @class */ (function (_super) {
     __extends(SVFormGroup, _super);
-    /**
-     *
-     */
-    function SVFormGroup(controls, validator, asyncValidator) {
-        return _super.call(this, controls, validator, asyncValidator) || this;
+    function SVFormGroup() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     SVFormGroup.prototype.setFromModelState = function (response, form) {
         if (response.error && response.error.ModelState) {
@@ -40,14 +42,27 @@ var SVFormGroup = (function (_super) {
     };
     return SVFormGroup;
 }(FormGroup));
+/**
+ * Server side validated form.
+ *
+ * @author Eduardo Elias Saleh
+ */
 export { SVFormGroup };
-SVFormGroup.decorators = [
-    { type: Injectable },
-];
-/** @nocollapse */
-SVFormGroup.ctorParameters = function () { return [
-    null,
-    null,
-    null,
-]; };
+//@Injectable()
+// export class SVFormGroup extends FormGroup {
+//     setFromModelState(response: any, form: SVFormGroup) {
+//     if(response.error && response.error.ModelState){
+//       let validationErrorDictionary = response.error.ModelState;
+//       for (var fieldName in validationErrorDictionary) {
+//         if (validationErrorDictionary.hasOwnProperty(fieldName)) {
+//           if (form.controls[fieldName]) {
+//             form.controls[fieldName].setErrors(validationErrorDictionary[fieldName]);
+//           } else {
+//             this.setErrors(Object.assign(this.errors, validationErrorDictionary[fieldName]));
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 //# sourceMappingURL=group.component.js.map
