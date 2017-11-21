@@ -24,13 +24,25 @@ var SVFormGroup = /** @class */ (function (_super) {
     function SVFormGroup(fgroup) {
         return _super.call(this, fgroup.controls, fgroup.validator, fgroup.asyncValidator) || this;
     }
-    SVFormGroup.prototype.setFromModelState = function (response, form) {
+    /**
+     * Receives errors from the modelstate and print them
+     * @param response http call response
+     */
+    /**
+       * Receives errors from the modelstate and print them
+       * @param response http call response
+       */
+    SVFormGroup.prototype.setFromModelState = /**
+       * Receives errors from the modelstate and print them
+       * @param response http call response
+       */
+    function (response) {
         if (response.error && response.error.ModelState) {
             var validationErrorDictionary = response.error.ModelState;
             for (var fieldName in validationErrorDictionary) {
                 if (validationErrorDictionary.hasOwnProperty(fieldName)) {
-                    if (form.controls[fieldName]) {
-                        form.controls[fieldName].setErrors(validationErrorDictionary[fieldName]);
+                    if (this.controls[fieldName]) {
+                        this.controls[fieldName].setErrors(validationErrorDictionary[fieldName]);
                     }
                     else {
                         this.setErrors(Object.assign(this.errors, validationErrorDictionary[fieldName]));
@@ -52,26 +64,6 @@ var __extends = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-/**
- * @whatItDoes Creates an {@link AbstractControl} from a user-specified configuration.
- *
- * It is essentially syntactic sugar that shortens the `new FormGroup()`,
- * `new FormControl()`, and `new FormArray()` boilerplate that can build up in larger
- * forms.
- *
- * @howToUse
- *
- * To use, inject `FormBuilder` into your component class. You can then call its methods
- * directly.
- *
- * {@example forms/ts/formBuilder/form_builder_example.ts region='Component'}
- *
- *  * **npm package**: `@angular/forms`
- *
- *  * **NgModule**: {@link ReactiveFormsModule}
- *
- * @stable
- */
 var SVFormBuilder = /** @class */ (function (_super) {
     __extends(SVFormBuilder, _super);
     function SVFormBuilder() {

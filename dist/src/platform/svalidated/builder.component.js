@@ -11,47 +11,7 @@ var __extends = (this && this.__extends) || (function () {
 import { Injectable } from '@angular/core';
 import { FormBuilder, ValidatorFn, AsyncValidatorFn, FormGroup, AbstractControl, FormControl, FormArray } from '@angular/forms';
 import { SVFormGroup } from './group.component';
-/**
- * @whatItDoes Creates an {@link AbstractControl} from a user-specified configuration.
- *
- * It is essentially syntactic sugar that shortens the `new FormGroup()`,
- * `new FormControl()`, and `new FormArray()` boilerplate that can build up in larger
- * forms.
- *
- * @howToUse
- *
- * To use, inject `FormBuilder` into your component class. You can then call its methods
- * directly.
- *
- * {@example forms/ts/formBuilder/form_builder_example.ts region='Component'}
- *
- *  * **npm package**: `@angular/forms`
- *
- *  * **NgModule**: {@link ReactiveFormsModule}
- *
- * @stable
- */
-var /**
- * @whatItDoes Creates an {@link AbstractControl} from a user-specified configuration.
- *
- * It is essentially syntactic sugar that shortens the `new FormGroup()`,
- * `new FormControl()`, and `new FormArray()` boilerplate that can build up in larger
- * forms.
- *
- * @howToUse
- *
- * To use, inject `FormBuilder` into your component class. You can then call its methods
- * directly.
- *
- * {@example forms/ts/formBuilder/form_builder_example.ts region='Component'}
- *
- *  * **npm package**: `@angular/forms`
- *
- *  * **NgModule**: {@link ReactiveFormsModule}
- *
- * @stable
- */
-SVFormBuilder = /** @class */ (function (_super) {
+var SVFormBuilder = /** @class */ (function (_super) {
     __extends(SVFormBuilder, _super);
     function SVFormBuilder() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -112,25 +72,5 @@ SVFormBuilder = /** @class */ (function (_super) {
     };
     return SVFormBuilder;
 }(FormBuilder));
-/**
- * @whatItDoes Creates an {@link AbstractControl} from a user-specified configuration.
- *
- * It is essentially syntactic sugar that shortens the `new FormGroup()`,
- * `new FormControl()`, and `new FormArray()` boilerplate that can build up in larger
- * forms.
- *
- * @howToUse
- *
- * To use, inject `FormBuilder` into your component class. You can then call its methods
- * directly.
- *
- * {@example forms/ts/formBuilder/form_builder_example.ts region='Component'}
- *
- *  * **npm package**: `@angular/forms`
- *
- *  * **NgModule**: {@link ReactiveFormsModule}
- *
- * @stable
- */
 export { SVFormBuilder };
 //# sourceMappingURL=builder.component.js.map

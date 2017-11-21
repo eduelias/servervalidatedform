@@ -6,5 +6,9 @@ import { FormGroup } from "@angular/forms";
  */
 export declare class SVFormGroup extends FormGroup {
     constructor(fgroup: FormGroup);
-    setFromModelState(response: any, form: SVFormGroup): void;
+    /**
+     * Receives errors from the modelstate and print them
+     * @param response http call response
+     */
+    setFromModelState(response: any): void;
 }
